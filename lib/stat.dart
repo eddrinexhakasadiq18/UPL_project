@@ -13,7 +13,7 @@ class _StatState extends State<Stat> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.blue,
       appBar: AppBar(
         title: const Text(" STATISTICS"),
       ),
