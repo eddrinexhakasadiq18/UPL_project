@@ -13,7 +13,7 @@ class _MoreState extends State<More> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.greenAccent,
+      backgroundColor: Colors.blueGrey,
       appBar: AppBar(
         title: const Text(" MORE"),
       ),
