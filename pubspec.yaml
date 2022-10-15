@@ -59,6 +59,7 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
+    - assets/
     - assets/images/upl_logo.png
     - assets/images/upl_ico.ico
 
