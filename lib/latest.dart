@@ -1,4 +1,6 @@
 import "package:flutter/material.dart";
+import 'package:flutter_svg/flutter_svg.dart';
+
 
 class Latest extends StatefulWidget {
   const Latest({Key? key}) : super(key: key);
@@ -8,47 +10,56 @@ class Latest extends StatefulWidget {
 }
 
 class _LatestState extends State<Latest> {
+  get svgPicture => null;
+
   @override
   Widget build(BuildContext context) {
     final Color bgColor = Color(0xffF3F3F3);
     final Color primaryColor = Color(0xffE70F0B);
 
     return Scaffold(
-      backgroundColor: bgColor,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        automaticallyImplyLeading: false,
-        actions: <Widget>[
-          IconButton(
-             color: Colors.black,
-            icon: Icon(Icons.search),
-            onPressed: () {},
-          ),
-          IconButton(
-            color: Colors.black,
-            icon: Icon(Icons.person),
-            onPressed: () {},
+      body: CustomScrollView(
+        slivers: [
+          SliverAppBar(
+            expandedHeight: 200,
+            flexibleSpace: FlexibleSpaceBar(
+              background: Image.asset(
+                'images/vipers.jpg',
+                fit: BoxFit.cover,
+              ),
+            ),
+            
+            leading: Padding(
+              padding: const EdgeInsets.only(left: 16),
+              child: CircleAvatar(
+                backgroundColor: Colors.white,
+                child: SvgPicture.asset(
+                  "assets/icons/back.svg"
+                  ),
+                  ),
+            ),
+
+           actions: [
+            CircleAvatar(
+                backgroundColor: Colors.white,
+                child: SvgPicture.asset(
+                  "assets/icons/share.svg"
+                  ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: CircleAvatar(
+                backgroundColor: Colors.white,
+                child: SvgPicture.asset(
+                    "assets/icons/search.svg"
+                    ),
+                    ),
+                  ),
+           ],
+           
           )
-        ],
-        centerTitle: true,
-        
-        title: Text(
-          "Feeds",
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
-            fontStyle: FontStyle.italic,
-          ),
-        ),
-      ),
-
-
-      body: ListView(
-        children: <Widget>[
-         
-        ],
+        ],       
       ),
     );
   }
