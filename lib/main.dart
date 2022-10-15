@@ -20,10 +20,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
+        title: 'UPL',
         theme: ThemeData(
+          scaffoldBackgroundColor: Colors.white,
           primarySwatch: Colors.blue,
         ),
+
         home: AnimatedSplashScreen(
             splash: 'images/upl_logo.png',
             splashIconSize: double.infinity,
@@ -35,9 +37,13 @@ class MyApp extends StatelessWidget {
             //splashTransition.sizeTransition,
             //splashTransition.fadeTransition,
             //splashTransition.decoratedBoxTransition
-            nextScreen: MyHomePage()));
+            nextScreen: MyHomePage())
+            
+          
+            );
   }
 }
+
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
