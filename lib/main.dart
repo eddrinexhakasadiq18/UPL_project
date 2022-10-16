@@ -1,7 +1,7 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:upl_app/latest.dart';
-import 'package:upl_app/my_team.dart';
+//import 'package:upl_app/my_team.dart';
 import 'package:upl_app/stat.dart';
 import 'package:upl_app/upl.dart';
 
@@ -58,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final screen = [
     const Latest(),
     const Upl(),
-    const MyTeam(),
+  //  const MyTeam(),
     const Stat(),
     const More(),
   ];
@@ -90,7 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           _selectedIndex = 0;
                         });
                       }),
-                  IconBottomBar(
+                 IconBottomBar(
                       text: "UPL",
                       icon: Icons.sports_soccer_sharp,
                       selected: _selectedIndex == 1,
@@ -99,15 +99,15 @@ class _MyHomePageState extends State<MyHomePage> {
                           _selectedIndex = 1;
                         });
                       }),
-                  IconBottomBar(
-                      text: "My Team",
-                      icon: Icons.local_grocery_store,
-                      selected: _selectedIndex == 2,
-                      onPressed: () {
-                        setState(() {
-                          _selectedIndex = 2;
-                        });
-                      }),
+                 // IconBottomBar(
+                     // text: "My Team",
+                    //  icon: Icons.local_grocery_store,
+                     // selected: _selectedIndex == 2,
+                     // onPressed: () {
+                      //  setState(() {
+                       //   _selectedIndex = 2;
+                        //});
+                     // }),
                   IconBottomBar(
                       text: "Stats",
                       icon: Icons.add,
