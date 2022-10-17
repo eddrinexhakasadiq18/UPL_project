@@ -4,9 +4,10 @@ import 'package:upl_app/latest.dart';
 //import 'package:upl_app/my_team.dart';
 import 'package:upl_app/stat.dart';
 import 'package:upl_app/upl.dart';
-
 import 'package:upl_app/more.dart';
 //import 'package:upl_app/splash.dart';
+import 'package:upl_app/profile_screen.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
+       
         title: 'UPL',
         theme: ThemeData(
           scaffoldBackgroundColor: Colors.white,
@@ -43,6 +45,10 @@ class MyApp extends StatelessWidget {
             );
   }
 }
+
+
+
+
 
 
 class MyHomePage extends StatefulWidget {
@@ -111,19 +117,19 @@ class _MyHomePageState extends State<MyHomePage> {
                   IconBottomBar(
                       text: "Stats",
                       icon: Icons.add,
-                      selected: _selectedIndex == 3,
+                      selected: _selectedIndex == 2,
                       onPressed: () {
                         setState(() {
-                          _selectedIndex = 3;
+                          _selectedIndex = 2;
                         });
                       }),
                   IconBottomBar(
                       text: "More",
                       icon: Icons.more_vert,
-                      selected: _selectedIndex == 4,
+                      selected: _selectedIndex == 3,
                       onPressed: () {
                         setState(() {
-                          _selectedIndex = 4;
+                          _selectedIndex = 3;
                         });
                       }),
                 ],
@@ -182,9 +188,18 @@ class _BottomNavigationBar1State extends State<BottomNavigationBar1> {
                         _selectedIndex = 1;
                       });
                     }),
+                //IconBottomBar(
+                    //text: "My Team",
+                    //icon: Icons.local_grocery_store,
+                    //selected: _selectedIndex == 2,
+                   // onPressed: () {
+                    //  setState(() {
+                      //  _selectedIndex = 2;
+                    //  });
+                    //}),
                 IconBottomBar(
-                    text: "My Team",
-                    icon: Icons.local_grocery_store,
+                    text: "Stats",
+                    icon: Icons.add,
                     selected: _selectedIndex == 2,
                     onPressed: () {
                       setState(() {
@@ -192,21 +207,12 @@ class _BottomNavigationBar1State extends State<BottomNavigationBar1> {
                       });
                     }),
                 IconBottomBar(
-                    text: "Stats",
-                    icon: Icons.add,
+                    text: "More",
+                    icon: Icons.more_vert,
                     selected: _selectedIndex == 3,
                     onPressed: () {
                       setState(() {
                         _selectedIndex = 3;
-                      });
-                    }),
-                IconBottomBar(
-                    text: "More",
-                    icon: Icons.more_vert,
-                    selected: _selectedIndex == 4,
-                    onPressed: () {
-                      setState(() {
-                        _selectedIndex = 4;
                       });
                     }),
               ],

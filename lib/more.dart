@@ -1,5 +1,4 @@
-import 'dart:io';
-import "package:flutter/material.dart";
+import 'package:flutter/material.dart';
 
 class More extends StatefulWidget {
   const More({Key? key}) : super(key: key);
@@ -12,13 +11,13 @@ class _MoreState extends State<More> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Colors.cyanAccent,
       appBar: AppBar(
-        title: const Text(" MORE"),
+        title: const Text("UPL"),
       ),
       body: ListView(
         children: const [
-          Text("THIS IS THE MORE PAGE"),
+          Text("This is the MORE page"),
         ],
       ),
     );

@@ -16,9 +16,9 @@ class _UplState extends State<Upl> {
         title: const Text("UPL"),
       ),
       body: ListView(
-
-        children: const [Text("This is the UP page"),],
-        
+        children: const [
+          Text("This is the UP page"),
+        ],
       ),
     );
   }

@@ -34,7 +34,8 @@ class _LatestState extends State<Latest> {
               child: CircleAvatar(
                 backgroundColor: Colors.white,
                 child: SvgPicture.asset(
-                  "assets/icons/back.svg"
+                  "assets/back.svg",
+                  color: Colors.black,
                   ),
                   ),
             ),
@@ -43,7 +44,8 @@ class _LatestState extends State<Latest> {
             CircleAvatar(
                 backgroundColor: Colors.white,
                 child: SvgPicture.asset(
-                  "assets/icons/share.svg"
+                  "assets/share.svg",
+                  color: Colors.black,
                   ),
                   ),
 
@@ -52,7 +54,8 @@ class _LatestState extends State<Latest> {
                     child: CircleAvatar(
                 backgroundColor: Colors.white,
                 child: SvgPicture.asset(
-                    "assets/icons/search.svg"
+                    "assets/search.svg",
+                    color: Colors.black,
                     ),
                     ),
                   ),
