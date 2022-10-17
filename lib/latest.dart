@@ -1,7 +1,6 @@
 import "package:flutter/material.dart";
 import 'package:flutter_svg/flutter_svg.dart';
 
-
 class Latest extends StatefulWidget {
   const Latest({Key? key}) : super(key: key);
 
@@ -28,44 +27,26 @@ class _LatestState extends State<Latest> {
                 fit: BoxFit.cover,
               ),
             ),
-            
-            leading: Padding(
-              padding: const EdgeInsets.only(left: 16),
-              child: CircleAvatar(
-                backgroundColor: Colors.white,
-                child: SvgPicture.asset(
-                  "assets/back.svg",
-                  color: Colors.black,
-                  ),
-                  ),
-            ),
-
-           actions: [
-            CircleAvatar(
-                backgroundColor: Colors.white,
-                child: SvgPicture.asset(
-                  "assets/share.svg",
-                  color: Colors.black,
-                  ),
-                  ),
-
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
-                    child: CircleAvatar(
-                backgroundColor: Colors.white,
-                child: SvgPicture.asset(
-                    "assets/search.svg",
-                    color: Colors.black,
-                    ),
-                    ),
-                  ),
-           ],
-           
+            leading: IconButton(
+                onPressed: () {
+                  print("The back button has been clicked");
+                },
+                icon: const Icon(Icons.arrow_back_ios_rounded)),
+            actions: [
+              IconButton(
+                  onPressed: () {
+                    print("THE SHARE BUTTON HAS BEEN CLICKED");
+                  },
+                  icon: const Icon(Icons.share)),
+              IconButton(
+                  onPressed: () {
+                    print("THE SEARCH BUTTON HAS BEEN CLICKED");
+                  },
+                  icon: const Icon(Icons.search)),
+            ],
           )
-        ],       
+        ],
       ),
     );
   }
 }
-
-
